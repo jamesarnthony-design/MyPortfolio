@@ -11,11 +11,11 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#6366F1', 
-                        secondary: '#818CF8', 
-                        dark: '#1E1B4B', 
-                        light: '#EEF2FF', 
-                        nameBlue: '#2563EB', 
+                        primary: '#6366F1', // Violet-blue main color
+                        secondary: '#818CF8', // Lighter violet-blue
+                        dark: '#1E1B4B', // Deep violet-blue
+                        light: '#EEF2FF', // Very light violet-blue
+                        nameBlue: '#2563EB', // Blue color for your name
                     },
                     fontFamily: {
                         sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -59,6 +59,7 @@
     </style>
 </head>
 <body class="font-sans text-dark bg-white scroll-smooth">
+    <!-- Navigation -->
     <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-md z-50">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <a href="#" class="text-[clamp(1.2rem,2vw,1.5rem)] font-bold text-primary">MyPortfolio</a>
@@ -76,6 +77,7 @@
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <section class="min-h-screen flex items-center section-padding bg-gradient-violet text-white">
         <div class="container mx-auto grid md:grid-cols-2 gap-8 items-center">
             <div class="order-2 md:order-1">
@@ -96,7 +98,7 @@
                         Download CV
                     </a>
                 </div>
-
+                <!-- ✅ UPDATED ICONS: Facebook, Instagram, Email -->
                 <div class="flex gap-4 mt-8">
                     <a href="#" class="text-xl text-white/80 hover:text-nameBlue transition-colors"><i class="fa fa-facebook"></i></a>
                     <a href="#" class="text-xl text-white/80 hover:text-nameBlue transition-colors"><i class="fa fa-instagram"></i></a>
@@ -105,12 +107,14 @@
             </div>
             <div class="order-1 md:order-2 flex justify-center">
                 <div class="w-[280px] h-[280px] md:w-[350px] md:h-[350px] rounded-full overflow-hidden border-8 border-white/80 shadow-2xl profile-hover">
+                    <!-- Replace with YOUR photo -->
                     <img src="my-profile.jpg" alt="Profile Photo" class="w-full h-full object-cover">
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- About Section -->
     <section id="about" class="section-padding bg-gradient-light">
         <div class="container mx-auto">
             <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-center mb-12 text-primary">About Me</h2>
@@ -125,26 +129,32 @@
         </div>
     </section>
 
+    <!-- Skills Section -->
     <section id="skills" class="section-padding bg-white">
         <div class="container mx-auto">
             <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-center mb-12 text-primary">My Skills</h2>
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 max-w-4xl mx-auto">
+                <!-- Photography -->
                 <div class="bg-gradient-light rounded-lg shadow-md p-6 text-center hover:transform hover:-translate-y-1 transition-all hover:shadow-lg">
                     <i class="fa fa-camera text-4xl text-indigo-500 mb-3"></i>
                     <p class="font-medium">Photography</p>
                 </div>
+                <!-- Hardware -->
                 <div class="bg-gradient-light rounded-lg shadow-md p-6 text-center hover:transform hover:-translate-y-1 transition-all hover:shadow-lg">
                     <i class="fa fa-laptop text-4xl text-slate-600 mb-3"></i>
                     <p class="font-medium">Hardware</p>
                 </div>
+                <!-- CSS -->
                 <div class="bg-gradient-light rounded-lg shadow-md p-6 text-center hover:transform hover:-translate-y-1 transition-all hover:shadow-lg">
                     <i class="fa fa-css3 text-4xl text-blue-500 mb-3"></i>
                     <p class="font-medium">CSS</p>
                 </div>
+                <!-- Graphic Design -->
                 <div class="bg-gradient-light rounded-lg shadow-md p-6 text-center hover:transform hover:-translate-y-1 transition-all hover:shadow-lg">
                     <i class="fa fa-paint-brush text-4xl text-pink-500 mb-3"></i>
                     <p class="font-medium">Graphic Design</p>
                 </div>
+                <!-- HTML -->
                 <div class="bg-gradient-light rounded-lg shadow-md p-6 text-center hover:transform hover:-translate-y-1 transition-all hover:shadow-lg">
                     <i class="fa fa-html5 text-4xl text-orange-500 mb-3"></i>
                     <p class="font-medium">HTML</p>
@@ -153,6 +163,7 @@
         </div>
     </section>
 
+    <!-- Projects Section - EASY TO UPLOAD & VIEW -->
     <section id="projects" class="section-padding bg-gradient-light">
         <div class="container mx-auto">
             <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-center mb-12 text-primary">My Projects</h2>
@@ -174,6 +185,7 @@
                     </div>
                 </div>
 
+                <!-- 📌 PROJECT 2 -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all border-2 border-primary/20">
                     <img src="project2.jpg" alt="Project 2" class="w-full h-52 object-cover">
                     <div class="p-6">
@@ -191,6 +203,7 @@
                     </div>
                 </div>
 
+                <!-- 📌 PROJECT 3 -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all border-2 border-primary/20">
                     <img src="project3.jpg" alt="Project 3" class="w-full h-52 object-cover">
                     <div class="p-6">
@@ -211,40 +224,47 @@
         </div>
     </section>
 
+    <!-- ✅ CERTIFICATES SECTION (3 images only) -->
     <section id="certificates" class="section-padding bg-white">
         <div class="container mx-auto">
             <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-center mb-12 text-primary">My Certificates</h2>
             <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <!-- 📜 CERTIFICATE 1 -->
                 <div class="bg-gradient-light p-4 rounded-xl shadow-md cert-hover text-center">
                     <img src="cert1.jpg" alt="Certificate 1" class="w-full h-auto object-contain rounded-lg mb-4 border-2 border-primary/20">
                     <h3 class="text-lg font-bold text-primary">Capstone Project Exibit 2026</h3>
                     <p class="text-dark/70 text-sm">Issued by: Davao Del Norte State College</p>
                 </div>
 
+                <!-- 📜 CERTIFICATE 2 -->
                 <div class="bg-gradient-light p-4 rounded-xl shadow-md cert-hover text-center">
                     <img src="cert2.jpg" alt="Certificate 2" class="w-full h-auto object-contain rounded-lg mb-4 border-2 border-primary/20">
                     <h3 class="text-lg font-bold text-primary">Phyton Essentials 1</h3>
                     <p class="text-dark/70 text-sm">Issued by: Cisco Networking Academy program</p>
                 </div>
 
+                <!-- 📜 CERTIFICATE 3 -->
                 <div class="bg-gradient-light p-4 rounded-xl shadow-md cert-hover text-center">
                     <img src="cert3.jpg" alt="Certificate 3" class="w-full h-auto object-contain rounded-lg mb-4 border-2 border-primary/20">
                     <h3 class="text-lg font-bold text-primary">Phyton Essentials 2</h3>
                     <p class="text-dark/70 text-sm">Issued by: Cisco Networking Academy program</p>
                 </div>
 
+                <!-- 📜 CERTIFICATE 4 -->
                 <div class="bg-gradient-light p-4 rounded-xl shadow-md cert-hover text-center">
                     <img src="cert4.jpg" alt="Certificate 3" class="w-full h-auto object-contain rounded-lg mb-4 border-2 border-primary/20">
                     <h3 class="text-lg font-bold text-primary">Community Service</h3>
                     <p class="text-dark/70 text-sm">Issued by: Davao Del Norte State College</p>
                 </div>
 
+                <!-- 📜 CERTIFICATE 5 -->
                 <div class="bg-gradient-light p-4 rounded-xl shadow-md cert-hover text-center">
                     <img src="cert5.jpg" alt="Certificate 3" class="w-full h-auto object-contain rounded-lg mb-4 border-2 border-primary/20">
                     <h3 class="text-lg font-bold text-primary">Certificate of Aprreciation</h3>
                     <p class="text-dark/70 text-sm">Issued by: MaryKnoll College of Panabo,Inc.</p>
                 </div>
 
+                <!-- 📜 CERTIFICATE 6 -->
                 <div class="bg-gradient-light p-4 rounded-xl shadow-md cert-hover text-center">
                     <img src="cert6.jpeg" alt="Certificate 3" class="w-full h-auto object-contain rounded-lg mb-4 border-2 border-primary/20">
                     <h3 class="text-lg font-bold text-primary">Certificate of Completition</h3>
@@ -254,11 +274,13 @@
         </div>
     </section>
 
+    <!-- ✅ UPDATED EDUCATION SECTION -->
     <section id="education" class="section-padding bg-gradient-light">
         <div class="container mx-auto">
             <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-center mb-12 text-primary">Educational Background</h2>
             <div class="max-w-4xl mx-auto space-y-8">
 
+                <!-- Tagum City National Trade School -->
                 <div class="bg-white p-6 rounded-xl shadow-md edu-hover flex flex-col md:flex-row gap-6 items-center">
                     <div class="w-28 h-28 flex-shrink-0">
                         <img src="logo-tcnchs.jpg" alt="Tagum City National Comprehensive High School Logo" class="w-full h-full object-contain">
@@ -269,6 +291,7 @@
                     </div>
                 </div>
 
+                <!-- Tagum City National Comprehensive High School -->
                 <div class="bg-white p-6 rounded-xl shadow-md edu-hover flex flex-col md:flex-row gap-6 items-center">
                     <div class="w-28 h-28 flex-shrink-0">
                         <img src="logo-tcnts.jpg" alt="Tagum City National Trade School Logo" class="w-full h-full object-contain">
@@ -279,6 +302,7 @@
                     </div>
                 </div>
 
+                <!-- Davao Del Norte State College -->
                 <div class="bg-white p-6 rounded-xl shadow-md edu-hover flex flex-col md:flex-row gap-6 items-center">
                     <div class="w-28 h-28 flex-shrink-0">
                         <img src="logo-ddnsc.jpg" alt="Davao Del Norte State College Logo" class="w-full h-full object-contain">
@@ -293,6 +317,7 @@
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" class="section-padding bg-gradient-violet text-white">
         <div class="container mx-auto">
             <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-center mb-12">Get In Touch</h2>
@@ -318,6 +343,7 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="bg-dark text-white/70 py-8 text-center">
         <div class="container mx-auto px-4">
             <p>&copy; 2026 James Arnthony C. Bulotano. All rights reserved.</p>
