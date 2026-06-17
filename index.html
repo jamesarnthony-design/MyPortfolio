@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366F1', 
+                        secondary: '#818CF8', 
+                        dark: '#1E1B4B', 
+                        light: '#EEF2FF', 
+                        nameBlue: '#2563EB', 
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .scroll-smooth {
+                scroll-behavior: smooth;
+            }
+            .section-padding {
+                @apply py-16 px-4 md:px-8 lg:px-16;
+            }
+            .bg-gradient-violet {
+                background: linear-gradient(135deg, #6366F1 0%, #818CF8 50%, #C084FC 100%);
+            }
+            .bg-gradient-light {
+                background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%);
+            }
+            .profile-hover {
+                transition: all 0.4s ease;
+            }
+            .profile-hover:hover {
+                transform: scale(1.08) rotate(3deg);
+                box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
+            }
+            .cert-hover {
+                transition: all 0.3s ease;
+            }
+            .cert-hover:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 30px rgba(99, 102, 241, 0.25);
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-dark bg-white scroll-smooth">
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-md z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-[clamp(1.2rem,2vw,1.5rem)] font-bold text-primary">MyPortfolio</a>
+            <div class="hidden md:flex gap-8">
+                <a href="#about" class="hover:text-primary transition-colors">About</a>
+                <a href="#skills" class="hover:text-primary transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-primary transition-colors">Projects</a>
+                <a href="#certificates" class="hover:text-primary transition-colors">Certificates</a>
+                <a href="#education" class="hover:text-primary transition-colors">Education</a>
+                <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+            </div>
+            <button class="md:hidden text-dark text-xl">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex items-center section-padding bg-gradient-violet text-white">
+        <div class="container mx-auto grid md:grid-cols-2 gap-8 items-center">
+            <div class="order-2 md:order-1">
+                <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight mb-4">
+                    Hi, I'm <span class="text-nameBlue">James Arnthony C. Bulotano</span>
+                </h1>
+                <h2 class="text-[clamp(1.2rem,2.5vw,1.8rem)] text-white/90 mb-6">
+                    Bachelor of Science in Information system
+                </h2>
+                <p class="text-white/80 mb-8 max-w-xl">
+                    The beautiful thing about learning is that no one can take it away from you. Education is the most powerfull weapon which you can use to change the world.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#contact" class="bg-white text-primary px-6 py-3 rounded-lg hover:bg-light transition-colors shadow-lg hover:shadow-xl font-medium">
+                        Hire Me
+                    </a>
+                    <a href="#" class="border-2 border-white text-white px-6 py-3 rounded-lg hover:bg-white/10 transition-colors">
+                        Download CV
+                    </a>
+                </div>
+
+                <div class="flex gap-4 mt-8">
+                    <a href="#" class="text-xl text-white/80 hover:text-nameBlue transition-colors"><i class="fa fa-facebook"></i></a>
+                    <a href="#" class="text-xl text-white/80 hover:text-nameBlue transition-colors"><i class="fa fa-instagram"></i></a>
+                    <a href="#" class="text-xl text-white/80 hover:text-nameBlue transition-colors"><i class="fa fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="order-1 md:order-2 flex justify-center">
+                <div class="w-[280px] h-[280px] md:w-[350px] md:h-[350px] rounded-full overflow-hidden border-8 border-white/80 shadow-2xl profile-hover">
+                    <img src="my-profile.jpg" alt="Profile Photo" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section-padding bg-gradient-light">
+        <div class="container mx-auto">
+            <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-center mb-12 text-primary">About Me</h2>
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-dark/80 mb-4 leading-relaxed">
+                    "Hi My name is JAMES ARNTHONY C. BULOTANO, 23 years old, 4th year College Student. I'm currently pursuing a Bachelor of Science in Information Systems at Davao Del Norte State College.
+                </p>
+                <p class="text-dark/80 leading-relaxed">
+                    I am Passionate about Technology, Graphic Design, Photography, Hardware and i am eager to grow and develop my skills.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section-padding bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-center mb-12 text-primary">My Skills</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 max-w-4xl mx-auto">
+                <div class="bg-gradient-light rounded-lg shadow-md p-6 text-center hover:transform hover:-translate-y-1 transition-all hover:shadow-lg">
+                    <i class="fa fa-camera text-4xl text-indigo-500 mb-3"></i>
+                    <p class="font-medium">Photography</p>
+                </div>
+                <div class="bg-gradient-light rounded-lg shadow-md p-6 text-center hover:transform hover:-translate-y-1 transition-all hover:shadow-lg">
+                    <i class="fa fa-laptop text-4xl text-slate-600 mb-3"></i>
+                    <p class="font-medium">Hardware</p>
+                </div>
+                <div class="bg-gradient-light rounded-lg shadow-md p-6 text-center hover:transform hover:-translate-y-1 transition-all hover:shadow-lg">
+                    <i class="fa fa-css3 text-4xl text-blue-500 mb-3"></i>
+                    <p class="font-medium">CSS</p>
+                </div>
+                <div class="bg-gradient-light rounded-lg shadow-md p-6 text-center hover:transform hover:-translate-y-1 transition-all hover:shadow-lg">
+                    <i class="fa fa-paint-brush text-4xl text-pink-500 mb-3"></i>
+                    <p class="font-medium">Graphic Design</p>
+                </div>
+                <div class="bg-gradient-light rounded-lg shadow-md p-6 text-center hover:transform hover:-translate-y-1 transition-all hover:shadow-lg">
+                    <i class="fa fa-html5 text-4xl text-orange-500 mb-3"></i>
+                    <p class="font-medium">HTML</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section-padding bg-gradient-light">
+        <div class="container mx-auto">
+            <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-center mb-12 text-primary">My Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all border-2 border-primary/20">
+                    <img src="project1.jpg" alt="Project 1" class="w-full h-52 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-primary">Capstone Project</h3>
+                        <p class="text-dark/70 mb-4">SMARTBIZ: CENTRALIZED INVENTORY AND POINT OF SALE SYSTEM FOR ZM GENERAL MERCHANDISE IN PANABO CITY</p>
+                        <div class="flex gap-2 mb-4 flex-wrap">
+                            <span class="bg-light text-primary px-3 py-1 rounded-full text-sm font-medium">Xampp</span>
+                            <span class="bg-light text-primary px-3 py-1 rounded-full text-sm font-medium">Vs Code</span>
+                            <span class="bg-light text-primary px-3 py-1 rounded-full text-sm font-medium">Web Hosting</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="text-secondary hover:underline font-medium">Live Demo</a>
+                            <a href="#" class="text-secondary hover:underline font-medium">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all border-2 border-primary/20">
+                    <img src="project2.jpg" alt="Project 2" class="w-full h-52 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-primary">Narrative Report</h3>
+                        <p class="text-dark/70 mb-4">It was all about our OJT - ON-THE-JOB Training.</p>
+                        <div class="flex gap-2 mb-4 flex-wrap">
+                            <span class="bg-light text-primary px-3 py-1 rounded-full text-sm font-medium"></span>
+                            <span class="bg-light text-primary px-3 py-1 rounded-full text-sm font-medium"></span>
+                            <span class="bg-light text-primary px-3 py-1 rounded-full text-sm font-medium"></span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="text-secondary hover:underline font-medium">Live Demo</a>
+                            <a href="#" class="text-secondary hover:underline font-medium">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all border-2 border-primary/20">
+                    <img src="project3.jpg" alt="Project 3" class="w-full h-52 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-primary">Capstone Manuscript</h3>
+                        <p class="text-dark/70 mb-4"p>
+                        <div class="flex gap-2 mb-4 flex-wrap">
+                            <span class="bg-light text-primary px-3 py-1 rounded-full text-sm font-medium"></span>
+                            <span class="bg-light text-primary px-3 py-1 rounded-full text-sm font-medium"></span>
+                            <span class="bg-light text-primary px-3 py-1 rounded-full text-sm font-medium"></span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="text-secondary hover:underline font-medium">Live Demo</a>
+                            <a href="#" class="text-secondary hover:underline font-medium">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certificates" class="section-padding bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-center mb-12 text-primary">My Certificates</h2>
+            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div class="bg-gradient-light p-4 rounded-xl shadow-md cert-hover text-center">
+                    <img src="cert1.jpg" alt="Certificate 1" class="w-full h-auto object-contain rounded-lg mb-4 border-2 border-primary/20">
+                    <h3 class="text-lg font-bold text-primary">Capstone Project Exibit 2026</h3>
+                    <p class="text-dark/70 text-sm">Issued by: Davao Del Norte State College</p>
+                </div>
+
+                <div class="bg-gradient-light p-4 rounded-xl shadow-md cert-hover text-center">
+                    <img src="cert2.jpg" alt="Certificate 2" class="w-full h-auto object-contain rounded-lg mb-4 border-2 border-primary/20">
+                    <h3 class="text-lg font-bold text-primary">Phyton Essentials 1</h3>
+                    <p class="text-dark/70 text-sm">Issued by: Cisco Networking Academy program</p>
+                </div>
+
+                <div class="bg-gradient-light p-4 rounded-xl shadow-md cert-hover text-center">
+                    <img src="cert3.jpg" alt="Certificate 3" class="w-full h-auto object-contain rounded-lg mb-4 border-2 border-primary/20">
+                    <h3 class="text-lg font-bold text-primary">Phyton Essentials 2</h3>
+                    <p class="text-dark/70 text-sm">Issued by: Cisco Networking Academy program</p>
+                </div>
+
+                <div class="bg-gradient-light p-4 rounded-xl shadow-md cert-hover text-center">
+                    <img src="cert4.jpg" alt="Certificate 3" class="w-full h-auto object-contain rounded-lg mb-4 border-2 border-primary/20">
+                    <h3 class="text-lg font-bold text-primary">Community Service</h3>
+                    <p class="text-dark/70 text-sm">Issued by: Davao Del Norte State College</p>
+                </div>
+
+                <div class="bg-gradient-light p-4 rounded-xl shadow-md cert-hover text-center">
+                    <img src="cert5.jpg" alt="Certificate 3" class="w-full h-auto object-contain rounded-lg mb-4 border-2 border-primary/20">
+                    <h3 class="text-lg font-bold text-primary">Certificate of Aprreciation</h3>
+                    <p class="text-dark/70 text-sm">Issued by: MaryKnoll College of Panabo,Inc.</p>
+                </div>
+
+                <div class="bg-gradient-light p-4 rounded-xl shadow-md cert-hover text-center">
+                    <img src="cert6.jpeg" alt="Certificate 3" class="w-full h-auto object-contain rounded-lg mb-4 border-2 border-primary/20">
+                    <h3 class="text-lg font-bold text-primary">Certificate of Completition</h3>
+                    <p class="text-dark/70 text-sm">Issued by: MaryKnoll College of Panabo,Inc.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="section-padding bg-gradient-light">
+        <div class="container mx-auto">
+            <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-center mb-12 text-primary">Educational Background</h2>
+            <div class="max-w-4xl mx-auto space-y-8">
+
+                <div class="bg-white p-6 rounded-xl shadow-md edu-hover flex flex-col md:flex-row gap-6 items-center">
+                    <div class="w-28 h-28 flex-shrink-0">
+                        <img src="logo-tcnchs.jpg" alt="Tagum City National Comprehensive High School Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="text-center md:text-left">
+                        <h3 class="text-xl font-bold text-primary">Tagum City National Comprehensive High School</h3>
+                        <p class="text-dark/70 mb-2">Tagum City, Davao del Norte | [2015-2019] – [Year Graduated]</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md edu-hover flex flex-col md:flex-row gap-6 items-center">
+                    <div class="w-28 h-28 flex-shrink-0">
+                        <img src="logo-tcnts.jpg" alt="Tagum City National Trade School Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="text-center md:text-left">
+                        <h3 class="text-xl font-bold text-primary">Tagum City National Trade School</h3>
+                        <p class="text-dark/70 mb-2">Tagum City, Davao del Norte | 2019-2021 – [Year Graduated]</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md edu-hover flex flex-col md:flex-row gap-6 items-center">
+                    <div class="w-28 h-28 flex-shrink-0">
+                        <img src="logo-ddnsc.jpg" alt="Davao Del Norte State College Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="text-center md:text-left">
+                        <h3 class="text-xl font-bold text-primary">Davao Del Norte State College</h3>
+                        <p class="text-dark/70 mb-2">Panabo City, Davao del Norte | 2021 – Present </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-padding bg-gradient-violet text-white">
+        <div class="container mx-auto">
+            <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-center mb-12">Get In Touch</h2>
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
+                    <p class="mb-4 text-white/90">Feel free to reach out for projects, collaborations, or just to say hi!</p>
+                    <div class="space-y-3">
+                        <p class="flex items-center gap-3"><i class="fa fa-envelope"></i> jamesarnthonoy.bulotano@dnsc.edu.ph</p>
+                        <p class="flex items-center gap-3"><i class="fa fa-phone"></i> 09918411044</p>
+                        <p class="flex items-center gap-3"><i class="fa fa-map-marker"></i> Tagum City, Philippines</p>
+                    </div>
+                </div>
+                <form class="space-y-4">
+                    <input type="text" placeholder="Your Name" class="w-full px-4 py-3 rounded-lg text-dark focus:outline-none focus:ring-2 focus:ring-white">
+                    <input type="email" placeholder="Your Email" class="w-full px-4 py-3 rounded-lg text-dark focus:outline-none focus:ring-2 focus:ring-white">
+                    <textarea placeholder="Your Message" rows="4" class="w-full px-4 py-3 rounded-lg text-dark focus:outline-none focus:ring-2 focus:ring-white"></textarea>
+                    <button type="submit" class="w-full bg-white text-primary font-medium py-3 rounded-lg hover:bg-light transition-colors shadow-lg">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white/70 py-8 text-center">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2026 James Arnthony C. Bulotano. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
